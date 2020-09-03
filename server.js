@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi');
 const allPlugins = require('./config/all.plugins');
 
-const MongoosePlugin = require('./plugins/mongoose.plugin');
+
 // MongoosePlugin();
 const init = async () => {
   const server = Hapi.server({

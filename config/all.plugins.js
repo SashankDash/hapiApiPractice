@@ -1,7 +1,12 @@
 const HapiSwagger = require('hapi-swagger');
 const Inert = require('@hapi/inert');
 const Vision = require('@hapi/vision');
-const userModule = require('../user/user.module');
+const userModule = require('../modules/user/user.module');
+const MongoosePlugin = require('../plugins/mongoose.plugin');
+const ApplicationModule = require('../modules/application/application.module');
+const CandidateModule = require('../modules/candidate/candidate.module');
+const CompanyModule = require('../modules/company/company.module');
+const JobModule = require('../modules/job/job.module');
 
 const swaggerOptions = {
   info: {
@@ -16,4 +21,9 @@ module.exports = [
   { plugin: HapiSwagger, options: swaggerOptions },
 
   userModule,
+  MongoosePlugin,
+  ApplicationModule,
+  CandidateModule,
+  CompanyModule,
+  JobModule,
 ];

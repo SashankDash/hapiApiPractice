@@ -51,6 +51,10 @@ module.exports = [
         params: Joi.object({
           id: Joi.string().required(),
         }),
+        payload: Joi.object({
+          name: Joi.string().optional(),
+          address: Joi.string().optional(),
+        }),
       },
       handler: userController.update,
       tags: ['api'],
