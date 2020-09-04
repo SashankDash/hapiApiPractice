@@ -9,18 +9,18 @@ const companySchema = new Schema(
     name: { type: String, required: true },
     city: { type: String, required: true },
     address: { type: String, required: true },
-    // candidates: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Candidate',
-    //   },
-    // ],
-    // jobs: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Job',
-    //   },
-    // ],
+    candidates: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Candidate',
+      },
+    ],
+    jobs: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Job',
+      },
+    ],
   },
   { timestamps: true }
 );

@@ -14,11 +14,11 @@ const CandidateSchema = new Schema({
         type:String,
         required:true
     },
-    // company:{
-    //     type:Schema.Types.ObjectId,
-    //     ref:'Company',
-    //     required:true
-    // }
+    company:{
+        type:Schema.Types.ObjectId,
+        ref:'Company',
+        required:true
+    }
 });
 
 module.exports = mongoose.model('Candidate',CandidateSchema);

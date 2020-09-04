@@ -14,7 +14,7 @@ module.exports = {
     },
     async find(request,h){
         try{
-            var company = await Company.find();
+            var company = await Company.find().populate('candidates');
             return h.response(company);
         }catch (error){
             return h.response(error).code(500);
@@ -22,7 +22,7 @@ module.exports = {
     },
     async findOne(request,h){
         try{
-            var company = await Company.findById(request.params.id);
+            var company = await Company.findById(request.params.id).populate('candidates');
             return h.response(company);
         }catch (error){
             return h.response(error).code(500);

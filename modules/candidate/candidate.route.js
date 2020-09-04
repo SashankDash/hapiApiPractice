@@ -20,7 +20,7 @@ module.exports = [
           first_name: Joi.string().required(),
           last_name: Joi.string().required(),
           email: Joi.string().required(),
-          // company: Joi.string().required(),
+          company: Joi.string().required(),
         }),
       },
       handler: CandidateController.create,
